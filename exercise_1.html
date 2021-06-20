@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <title>My JS</title>
+</head>
+
+<body>
+  <hr>
+  <br>
+  <p>X : <input type="number" id="xid" name="xtxt" value="0"></p>
+  <p>Y : <input type="number" id="yid" name="ytxt" value="0"></p>
+
+  <button onclick="dothis()">SUM</button>
+  <br>
+  <div id="result" style="color:green; font-weight:bold;"></div>
+</body>
+
+<script>
+  function dothis() {
+
+    var x = parseInt($("xid")[0].value)
+    var y = parseInt($("#yid")[0].value)
+
+    $(document).ready(function(){
+        $("button").click(function(){
+            $("#result").text(`${x} + ${y} = ${x + y}`);
+        })
+    })
+  }
+</script>
+
+</html>
